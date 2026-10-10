@@ -1,0 +1,80 @@
+/* Fills the template's empty sections using its own variables. */
+.sr-only{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+.skip-link{position:absolute;left:1rem;top:-4rem;background:var(--first-color);color:var(--black-color);padding:.5rem 1rem;border-radius:.5rem;z-index:200}
+.skip-link:focus{top:1rem}
+:focus-visible{outline:2px solid var(--first-color);outline-offset:3px}
+input:focus-visible,textarea:focus-visible{outline-offset:0}
+.muted{opacity:.75}
+.page{min-height:100vh}
+.nav__link.active-link{color:var(--first-color)}
+.nav__link.active-link::after{opacity:1}
+.blur-header::after{content:'';position:absolute;inset:0;background-color:hsla(var(--hue),8%,10%,.4);backdrop-filter:blur(24px);z-index:-1}
+.nav__menu a.nav__contact{text-align:center}
+@media (width <= 1150px){.nav__menu{visibility:hidden}.nav__menu.show-menu{visibility:visible}}
+/* Buttons */
+.button{display:inline-flex;align-items:center;column-gap:.5rem;background-color:var(--first-color);color:var(--black-color);padding:1rem 2rem;border-radius:4rem;font-weight:var(--font-semi-bold);cursor:pointer;transition:box-shadow .4s,transform .3s}
+.button:hover{box-shadow:0 8px 24px hsla(var(--hue),75%,60%,.3);transform:translateY(-2px)}
+.button:disabled{opacity:.5;cursor:not-allowed;transform:none;box-shadow:none}
+.button--ghost{background:none;color:var(--white-color);border:1px solid var(--border-color)}
+/* Home */
+.home{min-height:100vh;display:flex;align-items:center}
+.home__subtitle{font-size:var(--h2-font-size);color:var(--first-color);margin-bottom:1rem}
+.home__title{font-family:var(--second-font);font-weight:var(--font-semi-bold);font-size:var(--biggest-font-size);color:var(--white-color);line-height:1.1;margin-bottom:1.5rem}
+.typed-cursor{color:var(--first-color)}
+.home__description{max-width:36rem;margin-bottom:2rem}
+.home__buttons{display:flex;flex-wrap:wrap;gap:1rem;margin-top:1rem}
+/* Work list */
+.work__list{border-top:1px solid var(--border-color)}
+.work__item{display:flex;align-items:center;gap:1.5rem;padding:1.5rem 0;border-bottom:1px solid var(--border-color);color:var(--white-color);font-family:var(--second-font);font-size:var(--h1-font-size);transition:color .4s,padding-left .4s}
+.work__item:hover{color:var(--first-color);padding-left:.75rem}
+.work__item i{margin-left:auto}
+.work__number{color:var(--first-color);font-size:var(--small-font-size);font-family:var(--body-font)}
+.projects__grid{grid-template-columns:repeat(auto-fill,minmax(min(100%,17rem),1fr))}
+.project__card{display:block;height:100%;background:var(--container-color);border:1px solid var(--border-color);border-radius:1.5rem;padding:2rem;transition:border-color .4s,transform .4s}
+.project__card:hover{border-color:var(--first-color);transform:translateY(-4px)}
+.project__card img{border-radius:1rem;margin-bottom:1rem}
+.project__name{font-size:var(--h2-font-size);margin-block:.5rem}
+/* About */
+.about__content{max-width:48rem;margin-inline:auto}
+.about__title{font-family:var(--second-font);font-size:var(--bigger-font-size);color:var(--white-color);line-height:1.2;margin-bottom:1.5rem}
+.about__description{margin-bottom:2rem}
+.detail{max-width:48rem}
+.detail__title{text-align:left}
+.detail__img{border-radius:1.5rem;margin-bottom:2rem}
+.back{display:inline-flex;gap:.25rem;color:var(--first-color);margin-bottom:1.5rem}
+/* Skills */
+.skills__card{background:var(--container-color);border:1px solid var(--border-color);border-radius:1.5rem;padding:2rem}
+.skills__title{font-size:var(--h2-font-size);margin-bottom:1.5rem}
+.skills__list{display:flex;flex-wrap:wrap;gap:.75rem;margin-bottom:1.5rem}
+.skills__item{border:1px solid var(--border-color);border-radius:4rem;padding:.5rem 1.25rem;color:var(--white-color)}
+/* Contact */
+.contact__container{max-width:60rem;margin-inline:auto}
+.contact__form{display:grid;gap:.75rem}
+.contact__input{width:100%;background:var(--container-color);border:1px solid var(--border-color);border-radius:.75rem;padding:1rem;color:var(--white-color)}
+.contact__input:focus{border-color:var(--first-color)}
+.contact__area{resize:vertical}
+.contact__status{min-height:1.5rem;font-size:var(--small-font-size)}
+.contact__card{display:flex;gap:1rem;align-items:center;margin-bottom:1.5rem;color:var(--white-color)}
+.contact__card i{font-size:1.5rem;color:var(--first-color)}
+.contact__address{color:var(--text-color)}
+.contact__address:hover{color:var(--first-color)}
+.notfound{display:flex;align-items:center;text-align:center}
+.notfound__code{font-family:var(--second-font);font-size:var(--biggest-font-size);color:var(--first-color)}
+.notfound .container{margin-inline:auto}
+/* Footer */
+.footer{border-top:1px solid var(--border-color);padding-block:3rem 2rem;margin-top:4rem}
+.footer__container{display:grid;gap:1.5rem;justify-items:center;text-align:center}
+.footer__title{font-size:var(--h2-font-size);max-width:30rem}
+.footer__links,.footer__social{display:flex;gap:1.5rem;flex-wrap:wrap;justify-content:center}
+.footer__link,.footer__social-link{color:var(--white-color);transition:color .4s}
+.footer__link:hover,.footer__social-link:hover{color:var(--first-color)}
+.footer__copy{font-size:var(--smaller-font-size)}
+@media (width >= 768px){.contact__container{grid-template-columns:1.2fr 1fr}.home__title{white-space:nowrap}}
+/* Scroll reveal (JS adds .js; content stays visible without it) */
+.js .reveal{opacity:0;transform:translateY(24px);transition:opacity .7s ease,transform .7s ease}
+.js .reveal.in{opacity:1;transform:none}
+@media (prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  *,*::before,*::after{transition-duration:.01ms!important;animation:none!important}
+  .js .reveal{opacity:1;transform:none}
+}
